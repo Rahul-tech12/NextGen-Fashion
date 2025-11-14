@@ -1,0 +1,189 @@
+/* Layout same as prompt page */
+.cart-layout {
+  display: flex;
+  height: 100vh;
+  background: #f5f6fa;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Sidebar same as prompt page */
+.sidebar {
+  width: 240px;
+  background: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding: 25px 20px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2b59ff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  color: #555;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  background: #ebefff;
+  color: #2b59ff;
+}
+
+.sidebar li.active {
+  background: #2b59ff;
+  color: #fff;
+}
+
+/* Main container */
+.cart-container {
+  flex: 1;
+  padding: 40px 50px;
+  overflow-y: auto;
+}
+
+.cart-container h1 {
+  font-size: 2rem;
+  color: #2b2b2b;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.empty-text {
+  margin-top: 40px;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* Cart items */
+.items-list {
+  margin-top: 20px;
+}
+
+.cart-item {
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+      color: #2b41ffc2;
+}
+
+.price {
+  margin: 4px 0;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Quantity box */
+.qty-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-box button {
+  padding: 5px 10px;
+  background: #2b59ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.qty-box button:hover {
+  background: #1d40cc;
+}
+
+.qty-box span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Delete icon */
+.delete-btn {
+  margin-left: auto;
+  font-size: 1.3rem;
+  color: #ff4b4b;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #d60000;
+}
+
+/* Summary box */
+.summary {
+  margin-top: 30px;
+  background: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.summary h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.total-line {
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  padding-top: 12px;
+  font-weight: 700;
+}
+
+/* Checkout button */
+.checkout-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: #2b59ff;
+  color: #fff;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.checkout-btn:hover {
+  background: #1d40cc;
+}

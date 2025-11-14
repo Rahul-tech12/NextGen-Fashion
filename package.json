@@ -1,0 +1,33 @@
+{
+  "name": "ai-integrated-custom-clothing",
+  "version": "1.0.0",
+  "description": "It is a website where users can customize designs using AI and built-in features.",
+  "homepage": "https://github.com/Rahul-tech12/NextGen-AI-Integrated-Custom-Clothing#readme",
+  "bugs": {
+    "url": "https://github.com/Rahul-tech12/NextGen-AI-Integrated-Custom-Clothing/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rahul-tech12/NextGen-AI-Integrated-Custom-Clothing.git"
+  },
+  "license": "MIT",
+  "author": "Rahul Choudhary",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.2",
+    "nodemon": "^3.1.10",
+    "react-router-dom": "^7.9.5"
+  }
+}

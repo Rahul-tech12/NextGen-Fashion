@@ -1,50 +1,100 @@
-.order-item{
+.orders-layout {
   display: flex;
-    align-items: flex-start;
-    gap: 20vh;
-    margin-top: 54px;
-        border-bottom: 1px solid lightgray;
-    width: 171vh;
-    padding-bottom: 2vh;
+  height: 100vh;
+  background: var(--bg-color);
+  font-family: "Poppins", sans-serif;
 }
-.order-item img{
-  width: 166px;
-    margin-left: 19px;
-    margin-top: -13px;
+
+/* MAIN CONTENT */
+.orders-container {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
 }
-#order-item-info{
-      margin-left: -76px;
+
+.orders-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2b2b2b;
 }
-#order-status{
-      font-size: 19px;
-    color: green;
-    font-weight: 900;
-}
-#del_date{
-      font-size: 19px;
-}
-.order-page{
+
+/* EACH ORDER CARD */
+.order-card {
   display: flex;
-    flex-direction: column;
-    gap: 2vh;
+  gap: 20px;
+  padding: 20px;
+  background: var(--card-bg);
+  border: 1px solid #dedede;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: 0.25s ease;
 }
-.order-page h1{
-      align-self: center;
-    padding-bottom: 5vh;
-    padding-top: 10px;
+
+.order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
-.order-header{
-  display: flex;
-    margin-left: 3vh;
-    padding-left: 5.6vh;
-    font-size: 21px;
-    border-bottom: 1px solid black;
-    width: 166vh;
-    padding-bottom: 5px;
+
+/* PRODUCT IMAGE */
+.order-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
-.order-header #status{
-      padding-left: 95.7vh;
+
+/* TEXT SECTION */
+.order-details {
+  flex: 1;
 }
-.order-header #date{
-      padding-left: 12.7vh;
+
+.order-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+
+.order-description {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 6px 0 12px;
+}
+
+/* STATUS BADGE */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.status-pending {
+  background: #fff4d9;
+  color: #c58b00;
+}
+
+.status-shipped {
+  background: #e3f1ff;
+  color: #1673e8;
+}
+
+.status-delivered {
+  background: #e7ffe9;
+  color: #0ea542;
+}
+
+.status-cancelled {
+  background: #ffe8e8;
+  color: #df2f2f;
+}
+
+/* DELIVERY DATE */
+.delivery-date {
+  font-size: 0.95rem;
+  color: #444;
+  font-weight: 600;
 }

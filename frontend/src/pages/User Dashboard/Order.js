@@ -1,97 +1,79 @@
-import React from 'react'
-import Layout from '../../components/Layout/Layout.js'
+import React from "react";
+import Sidebar from "../../components/Sidebar";
 import "./Order.css";
 
+const sampleOrders = [
+  {
+    id: 1,
+    img: "/register.png",
+    product: "AI Hoodie - Neon Glow",
+    description: "A futuristic hoodie generated using AI neon patterns.",
+    status: "Delivered",
+    deliveryDate: "25 Feb 2025",
+  },
+  {
+    id: 2,
+    img: "/register.png",
+    product: "AI Sneakers Limited Edition",
+    description: "White sneakers with hologram-generated styling.",
+    status: "Shipped",
+    deliveryDate: "29 Feb 2025",
+  },
+  {
+    id: 3,
+    img: "/register.png",
+    product: "AI Cyber Jacket",
+    description: "Cyberpunk jacket designed using AI fashion tools.",
+    status: "Pending",
+    deliveryDate: "3 Mar 2025",
+  },
+];
+
 const Order = () => {
+  const statusClass = (status) => {
+    switch (status) {
+      case "Pending":
+        return "status-badge status-pending";
+      case "Shipped":
+        return "status-badge status-shipped";
+      case "Delivered":
+        return "status-badge status-delivered";
+      case "Cancelled":
+        return "status-badge status-cancelled";
+      default:
+        return "status-badge";
+    }
+  };
+
   return (
-    <>
-    <Layout></Layout>
-    <div className='order-page'> 
-      <h1>Orders</h1>
-      <div className='order-list'>
-        <div className='order-header'>
-          <h4>Product</h4>
-          <h4 id='status'>Current order status</h4>
-          <h4 id='date'>Delivery Date</h4>
-        </div>
-        <div className='order-item'>
-          <img src="https://m.media-amazon.com/images/I/619xMvtqClL._AC_AA360_.jpg" />
-            <div className="item-info" id='order-item-info'>
-              <h3>
-                Lymio Jackets || Jacket for men || LightWeight Outwear Jacket
-              </h3>
-              <p><b>Size:</b>2XL</p>
-              <p><b>Colour:</b>Green</p>
-        </div>
-        <p id='order-status'>Shipped</p>
-        <p id='del-date'>20th November,2025</p>
-      </div>
-       <div className='order-item'>
-          <img src="https://m.media-amazon.com/images/I/612FuICrCCL._SY879_.jpg" />
-            <div className="item-info" id='order-item-info'>
-              <h3>
-                Lymio Jackets || Jacket for men || LightWeight Outwear Jacket
-              </h3>
-              <p><b>Size:</b>2XL</p>
-              <p><b>Colour:</b>Green</p>
-        </div>
-        <p id='order-status'>Shipped</p>
-        <p id='del-date'>18th November,2025</p>
-      </div>
-       <div className='order-item'>
-          <img src="https://m.media-amazon.com/images/I/51tkmHjrvPL._SX679_.jpg" />
-            <div className="item-info" id='order-item-info'>
-              <h3>
-                Lymio Jackets || Jacket for men || LightWeight Outwear Jacket
-              </h3>
-              <p><b>Size:</b>2XL</p>
-              <p><b>Colour:</b>Green</p>
-        </div>
-        <p id='order-status'>Shipped</p>
-        <p id='del-date'>20th November,2025</p>
-      </div>
-       <div className='order-item'>
-          <img src="https://m.media-amazon.com/images/I/619xMvtqClL._AC_AA360_.jpg" />
-            <div className="item-info" id='order-item-info'>
-              <h3>
-                Lymio Jackets || Jacket for men || LightWeight Outwear Jacket
-              </h3>
-              <p><b>Size:</b>2XL</p>
-              <p><b>Colour:</b>Green</p>
-        </div>
-        <p id='order-status'>Shipped</p>
-        <p id='del-date'>20th November,2025</p>
-      </div>
-       <div className='order-item'>
-          <img src="https://m.media-amazon.com/images/I/612FuICrCCL._SY879_.jpg" />
-            <div className="item-info" id='order-item-info'>
-              <h3>
-                Lymio Jackets || Jacket for men || LightWeight Outwear Jacket
-              </h3>
-              <p><b>Size:</b>2XL</p>
-              <p><b>Colour:</b>Green</p>
-        </div>
-        <p id='order-status'>Delivered</p>
-        <p id='del-date'>11th November,2025</p>
-      </div>
-       <div className='order-item'>
-          <img src="https://m.media-amazon.com/images/I/51tkmHjrvPL._SX679_.jpg" />
-            <div className="item-info" id='order-item-info'>
-              <h3>
-                Lymio Jackets || Jacket for men || LightWeight Outwear Jacket
-              </h3>
-              <p><b>Size:</b>2XL</p>
-              <p><b>Colour:</b>Green</p>
-        </div>
-        <p id='order-status'>Delivered</p>
-        <p id='del-date'>10th November,2025</p>
-      </div>
+    <div className="orders-layout">
+      <Sidebar />
 
-    </div>
-    </div>
-    </>
-    
-  )
-}
+      <div className="orders-container">
+        <h1>Your Orders</h1>
 
-export default Order
+        {sampleOrders.map((order) => (
+          <div className="order-card" key={order.id}>
+            <img src={order.img} className="order-img" />
+
+            <div className="order-details">
+              <h3 className="order-title">{order.product}</h3>
+
+              <p className="order-description">{order.description}</p>
+
+              <span className={statusClass(order.status)}>
+                {order.status}
+              </span>
+
+              <p className="delivery-date">
+                Delivery by: <strong>{order.deliveryDate}</strong>
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Order;

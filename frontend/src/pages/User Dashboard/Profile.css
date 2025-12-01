@@ -1,0 +1,103 @@
+.profile-layout {
+  display: flex;
+  height: 100vh;
+  background: var(--bg-color);
+  font-family: "Poppins", sans-serif;
+}
+
+.profile-container {
+  flex: 1;
+  padding: 40px;
+}
+
+.profile-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #2b2b2b;
+}
+
+.profile-card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #e6e6e6;
+  display: flex;
+  gap: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* Avatar Section */
+.avatar-section {
+  text-align: center;
+}
+
+.profile-big-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #dce1ff;
+}
+
+.upload-btn {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 10px 16px;
+  background: #2b59ff;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.upload-btn input {
+  display: none;
+}
+
+/* Form Section */
+.form-section {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid #cfd3dc;
+  background: #fafbfc;
+  outline: none;
+  transition: 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #2b59ff;
+  box-shadow: 0 0 8px rgba(43, 89, 255, 0.2);
+}
+
+.save-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  background: #2b59ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #1d40cc;
+}

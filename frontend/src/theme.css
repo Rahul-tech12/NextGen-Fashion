@@ -1,0 +1,53 @@
+:root {
+  --bg-color: #f5f6fa;
+  --card-bg: #ffffffc7;
+  --text-color: #2b2b2b;
+  --border-color: #e6e6e6;
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #555;
+  --sidebar-hover: #f0f2ff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #141414;
+  --card-bg: #6756a5d2;
+  --text-color: #f1f1f1;
+  --border-color: #2a2a2a; 
+  --sidebar-bg: #1a1a1a;
+  --sidebar-text: #cfcfcf;
+  --sidebar-hover: #6756a5d2;
+}
+/* Apply variables to the whole app */
+body, .app, .page, .container, .dashboard, .profile-layout, .settings-layout {
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Apply card style globally */
+.card, .box, .profile-card, .settings-card, .order-card, .auth-box,.cart-item {
+  background: var(--card-bg) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Apply sidebar styling globally */
+.sidebar {
+  background: var(--sidebar-bg) !important;
+  color: var(--sidebar-text) !important;
+}
+
+.sidebar li:hover {
+  background: var(--sidebar-hover) !important;
+}
+
+/* Borders (buttons, inputs, boxes) */
+input, textarea, select, button {
+  border-color: var(--border-color) !important;
+  color: var(--text-color) !important;
+  background: var(--bg-color) !important;
+}
+
+/* Force headings to follow theme */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color) !important;
+}

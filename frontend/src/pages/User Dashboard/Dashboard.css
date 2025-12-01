@@ -1,0 +1,124 @@
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+}
+
+.dashboard-container {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/* TITLE */
+.dashboard-container h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.subtitle {
+  margin-bottom: 25px;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+/* STATS GRID */
+.stats-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+
+.stat-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  transition: 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.stat-number {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+/* SECTION */
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  margin-bottom: 15px;
+}
+
+/* ORDERS LIST */
+.orders-list {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.order-row:last-child {
+  margin-bottom: 0;
+}
+
+/* BADGES */
+.badge {
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.delivered { background: #e7ffe9; color: #0ea542; }
+.shipped   { background: #e3f1ff; color: #1673e8; }
+.pending   { background: #fff4d9; color: #c58b00; }
+
+/* AI IMAGES */
+.image-row {
+  display: flex;
+  gap: 15px;
+}
+
+.image-row img {
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+  background: var(--card-bg);
+}
+.dashboard-container {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;   /* 🔥 FIX horizontal stacking */
+}

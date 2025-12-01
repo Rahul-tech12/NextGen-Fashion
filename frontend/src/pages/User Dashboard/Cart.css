@@ -2,14 +2,14 @@
 .cart-layout {
   display: flex;
   height: 100vh;
-  background: #f5f6fa;
+  background: var(--bg-color);
   font-family: "Poppins", sans-serif;
 }
 
 /* Sidebar same as prompt page */
 .sidebar {
   width: 240px;
-  background: #ffffff;
+  background: var(--card-bg);
   border-right: 1px solid #e0e0e0;
   padding: 25px 20px;
   box-shadow: 2px 0 10px rgba(0,0,0,0.05);
@@ -18,7 +18,7 @@
 .brand {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #2b59ff;
+  color: var(--text-color);
   margin-bottom: 30px;
   text-align: center;
 }
@@ -35,19 +35,19 @@
   gap: 12px;
   margin-bottom: 10px;
   border-radius: 8px;
-  color: #555;
+  color: var(--text-color);
   cursor: pointer;
   transition: 0.3s;
 }
 
 .sidebar li:hover {
   background: #ebefff;
-  color: #2b59ff;
+  color: var(--text-color);
 }
 
 .sidebar li.active {
   background: #2b59ff;
-  color: #fff;
+  color: var(--text-color);
 }
 
 /* Main container */
@@ -59,7 +59,7 @@
 
 .cart-container h1 {
   font-size: 2rem;
-  color: #2b2b2b;
+  color: var(--text-color);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -68,7 +68,7 @@
 .empty-text {
   margin-top: 40px;
   font-size: 1.2rem;
-  color: #888;
+  color: var(--text-color);
 }
 
 /* Cart items */
@@ -97,12 +97,12 @@
 .info h3 {
   margin: 0;
   font-size: 1.1rem;
-      color: #2b41ffc2;
+      color: var(--text-color);
 }
 
 .price {
   margin: 4px 0;
-  color: #333;
+  color: var(--text-color);
   font-weight: 600;
 }
 
@@ -116,7 +116,7 @@
 .qty-box button {
   padding: 5px 10px;
   background: #2b59ff;
-  color: #fff;
+  color: var(--text-color);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -135,18 +135,18 @@
 .delete-btn {
   margin-left: auto;
   font-size: 1.3rem;
-  color: #ff4b4b;
+  color: var(--text-color);
   cursor: pointer;
 }
 
 .delete-btn:hover {
-  color: #d60000;
+  color: var(--text-color);
 }
 
 /* Summary box */
 .summary {
   margin-top: 30px;
-  background: #ffffff;
+  background: var(--card-bg);
   border: 1px solid #dedede;
   border-radius: 12px;
   padding: 20px;
@@ -154,7 +154,7 @@
 
 .summary h2 {
   margin-bottom: 15px;
-  color: #333;
+  color: var(--text-color);
 }
 
 .line {
@@ -176,7 +176,7 @@
   margin-top: 15px;
   padding: 12px;
   background: #2b59ff;
-  color: #fff;
+  color: var(--text-color);
   border-radius: 12px;
   border: none;
   cursor: pointer;

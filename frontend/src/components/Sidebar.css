@@ -1,12 +1,132 @@
-.link {
-  text-decoration: none;
-  color: inherit;
+/* Sidebar layout */
+.sidebar {
+  width: 240px;
+  min-height: 100vh;   /* FIX */
+  height: auto;        /* FIX */
+  background: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* BRAND */
+.brand {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2b59ff;
+  margin-bottom: 30px;
+}
+
+/* NAVIGATION */
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+}
+
+.nav-menu li {
+  padding: 12px 15px;
   display: flex;
   align-items: center;
   gap: 12px;
-  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.link:hover {
+.nav-menu li:hover {
+  background: #f0f2ff;
   color: #2b59ff;
+}
+
+/* PROFILE BOX */
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: #f7f8ff;
+  border: 1px solid #e0e4ff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  position: relative;
+}
+
+.sidebar-profile:hover {
+  background: #eef0ff;
+  box-shadow: 0 3px 10px rgba(43, 89, 255, 0.15);
+}
+
+.profile-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.nav-menu a{
+      color: #b3b3b3;
+    text-decoration: none;
+}
+
+.profile-info .profile-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #50505df5;
+}
+
+.profile-info .profile-email {
+  font-size: 0.75rem;
+  color: #777;
+}
+
+.profile-arrow {
+  margin-left: auto;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* DROPDOWN THAT OPENS UPWARDS */
+.profile-dropdown-up {
+  position: absolute;
+  bottom: 70px;  /* 🔥 DROPDOWN ABOVE PROFILE */
+  left: 20px;
+  width: 200px;
+  color: black;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0px -5px 15px rgba(0,0,0,0.08);
+  animation: slideUp 0.3s ease;
+}
+
+.profile-dropdown-up p {
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.profile-dropdown-up p:hover {
+  background: #f0f2ff;
+  color: #2b59ff;
+}
+
+.logout {
+  color: #e63939 !important;
+}
+
+/* Animation */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
